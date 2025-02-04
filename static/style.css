@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/static/images/background1.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6); /* Adjust the transparency level here */
+    z-index: -1;
+    pointer-events: none; /* Ensures it doesn't block user interactions */
+}
+
+.navbar {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('/static/images/farm-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.welcome-title {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #ffcc33;
+}
+
+.welcome-text {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Button Section */
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+    flex-wrap: wrap;
+}
+
+.big-button {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.big-button:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-title {
+        font-size: 2em;
+    }
+
+    .welcome-text {
+        font-size: 1.2em;
+    }
+
+    .big-button {
+        padding: 15px 20px;
+        font-size: 1em;
+    }
+}
+
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Center the form container */
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Form header */
+h1 {
+    text-align: center;
+    color: #006400; /* A green color for agriculture theme */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Form labels */
+form label {
+    font-size: 1em;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Form input fields */
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Input field focus effect */
+form input:focus {
+    border-color: #006400;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 100, 0, 0.5);
+}
+
+/* Submit button styling */
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #006400;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Submit button hover effect */
+form button:hover {
+    background: #228B22;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* Table styling */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table headers */
+table thead th {
+    background-color: #228B22;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+/* Table rows */
+table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease-in-out;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background: rgba(34, 139, 34, 0.1); /* Light green hover effect */
+}
+
+/* Table data cells */
+table tbody td {
+    padding: 12px 15px;
+    font-size: 0.95em;
+    color: #333;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    table thead {
+        display: none; /* Hide headers on smaller screens */
+    }
+
+    table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table tbody td:before {
+        content: attr(data-label); /* Add custom labels for each cell */
+        font-weight: bold;
+        color: #006400;
+        text-transform: uppercase;
+    }
+}
