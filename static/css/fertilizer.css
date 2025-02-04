@@ -1,0 +1,55 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/static/images/fertilizer-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 50px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    color: #006400; /* Green shade */
+    font-size: 2em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+ul li {
+    margin: 10px 0;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+ul li strong {
+    color: #228B22; /* Highlight crop names */
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #228B22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background: #006400;
+}
