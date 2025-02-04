@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Connect</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="project-title">Farm Connect and Soil Fertility</span>
+        <div class="navbar-links">
+            <a href="/starter">Home</a>
+            <a href="/fertility">Fertility Predict</a>
+            <a href="/add_product">Add Product</a>
+            <a href="/products">View Products</a>
+            <a href="#">Fertilizer</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

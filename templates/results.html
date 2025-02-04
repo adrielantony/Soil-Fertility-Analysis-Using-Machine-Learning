@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="/static/css/results.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+
+        <!-- Display Fertility Score -->
+        <p class="score">Predicted Fertility Score: <strong>{{ fertility_score }}</strong></p>
+
+        <!-- Recommended Crops -->
+        <h2>Recommended Crops</h2>
+        <ul>
+            {% for crop in crops %}
+                <li>{{ crop }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Fertilizer Recommendations -->
+        <h2>Fertilizer Recommendations</h2>
+        <ul>
+            {% for crop, recommendation in fertilizers.items() %}
+                <li>
+                    <strong>{{ crop }}</strong>: {{ recommendation }}
+                </li>
+            {% endfor %}
+        </ul>
+
+        <!-- Back Button -->
+        <a class="back-button" href="/starter">Back to Prediction Form</a>
+    </div>
+</body>
+</html>

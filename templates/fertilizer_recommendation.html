@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fertilizer Recommendations</title>
+    <link rel="stylesheet" href="/static/css/fertilizer.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Fertilizer Recommendations</h2>
+        <ul>
+            {% for crop, recommendation in fertilizers.items() %}
+                <li>
+                    <strong>{{ crop }}</strong>: {{ recommendation }}
+                </li>
+            {% endfor %}
+        </ul>
+        <a class="back-button" href="/starter">Back</a>
+    </div>
+</body>
+</html>

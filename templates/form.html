@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Fertility Prediction</title>
+    <link rel="stylesheet" href="/static/style1.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    {% include "nav.html" %}
+    <div class="container">
+        <h1>Soil Fertility Prediction</h1>
+        <form method="POST" action="/predict">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="Soil_pH">Soil pH:</label>
+                    <input type="text" id="Soil_pH" name="Soil_pH" required>
+                </div>
+                <div class="form-group">
+                    <label for="Nitrogen">Nitrogen (ppm):</label>
+                    <input type="text" id="Nitrogen" name="Nitrogen" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="Phosphorus">Phosphorus (ppm):</label>
+                    <input type="text" id="Phosphorus" name="Phosphorus" required>
+                </div>
+                <div class="form-group">
+                    <label for="Potassium">Potassium (ppm):</label>
+                    <input type="text" id="Potassium" name="Potassium" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="Temperature">Temperature (°C):</label>
+                    <input type="text" id="Temperature" name="Temperature" required>
+                </div>
+                <div class="form-group">
+                    <label for="Rainfall">Rainfall (mm):</label>
+                    <input type="text" id="Rainfall" name="Rainfall" required>
+                </div>
+            </div>
+            <div class="form-row center-row">
+                <div class="form-group">
+                    <label for="Humidity">Humidity (%):</label>
+                    <input type="text" id="Humidity" name="Humidity" required>
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Predict</button>
+        </form>
+
+        <!-- Prediction Results -->
+        <h2>{{ prediction_text }}</h2>
+        <h3>{{ crop_recommendation }}</h3>
+
+        <!-- Fertilizer Recommendations -->
+        {% if fertilizer_recommendations %}
+            <h3>Fertilizer Recommendations:</h3>
+            <ul>
+                {% for crop, recommendation in fertilizer_recommendations.items() %}
+                    <li><strong>{{ crop }}:</strong> {{ recommendation }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Market Prices</title>
+    <link rel="stylesheet" href="/static/css/market_prices.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Market Prices</h1>
+        <div class="product-grid">
+            {% for crop in crops %}
+            <div class="product-card">
+                <img src="{{ crop.image }}" alt="{{ crop.name }}" class="product-image">
+                <h2 class="product-name">{{ crop.name }}</h2>
+                <p class="product-price">{{ crop.price }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="back-button" href="/starter">Back to Home</a>
+    </div>
+</body>
+</html>
